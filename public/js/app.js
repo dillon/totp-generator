@@ -17,8 +17,8 @@ function truncateTo(str, digits) {
 new Vue({
   el: '#app',
   data: {
-    secret_key: 'JBSWY3DPEHPK3PXP',
-    digits: 6,
+    secret_key: 'dillonpetito@gmail.comHDECHALLENGE003',
+    digits: 10,
     period: 30,
     updatingIn: 0,
     token: null
@@ -37,7 +37,7 @@ new Vue({
   computed: {
     totp: function () {
       return new OTPAuth.TOTP({
-        algorithm: 'SHA1',
+        algorithm: 'SHA512',
         digits: this.digits,
         period: this.period,
         secret: OTPAuth.Secret.fromB32(stripSpaces(this.secret_key)),
